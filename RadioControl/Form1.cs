@@ -16,8 +16,9 @@ namespace RadioControl
         {
             InitializeComponent();
             CollectionOfSongs collection = new CollectionOfSongs();
-            List<String> tags = new List<string>();
-            tags.Add("pop");
+            Tags tags = new Tags();
+            tags.AddTag("pop");
+            tags.AddTag("house");
             collection.AddSong("Playmen", "Fallin", 2012, tags);
             collection.ToString();
         }

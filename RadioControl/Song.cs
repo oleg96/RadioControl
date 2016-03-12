@@ -8,32 +8,57 @@ namespace RadioControl
 {
     class Song
     {
-        string artist { set; get; }
-        string name { set; get; }
-        int year { set; get; }
-        List<String> tags { set; get; }
-        public Song(string artist, string name, int year, List<String> tags)
+        private string artist;
+        public string Artist
         {
-            this.artist = artist;
-            this.name = name;
-            this.year = year;
-            this.tags = tags;
+            get { return artist; }
+            set
+            {
+                if (value != "")
+                {
+                    artist = value;
+                }
+            }
         }
-        public string returnArtist()
+        private string name;
+        public string Name
         {
-            return artist;
+            get { return name; }
+            set
+            {
+                if (value != "")
+                {
+                    name = value;
+                }
+            }
         }
-        public string returnName()
+        private int year;
+        public int Year
         {
-            return name;
+            get { return year; }
+            set
+            {
+                if (value > 0)
+                {
+                    year = value;
+                }
+            }
         }
-        public int returnYear()
+        private Tags tags;
+        public Tags Tags
         {
-            return year;
+            get { return tags; }
+            set
+            {
+                tags = value;
+            }
         }
-        public List<String> returnTags()
+        public Song(string artist, string name, int year, Tags tags)
         {
-            return tags;
+            this.Artist = artist;
+            this.Name = name;
+            this.Year = year;
+            this.Tags = tags;
         }
         public override string ToString()
         {

@@ -8,8 +8,8 @@ namespace RadioControl
 {
     class CollectionOfSongs
     {
-        List<Song> songCollection = new List<Song>();
-        public void AddSong(string artist, string name, int year, List<String> tags)
+        private List<Song> songCollection = new List<Song>();
+        public void AddSong(string artist, string name, int year, Tags tags)
         {
             songCollection.Add(new Song(artist, name, year, tags));
         }
